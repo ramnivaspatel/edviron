@@ -1,0 +1,27 @@
+EDVIRON Revenue Analytics – Explanation Note
+
+Revenue Logic:
+
+The dataset consists of three pricing layers:
+1. Edviron Buying Price
+2. Partner Pricing
+3. Merchant Pricing
+
+Flat pricing is treated as fixed INR per transaction.
+Percentage pricing is applied on Transaction Amount.
+
+ERP Revenue = Merchant Pricing – Partner Pricing  
+Edviron Net Revenue = Partner Pricing – Edviron Buying  
+Edviron Gross Revenue = ERP Revenue + Edviron Net Revenue  
+
+Settlement Assumptions:
+
+- ERP payable only for SUCCESS transactions.
+- Non-success transactions treated as exposure.
+- Gateway fees inferred using Vendor Amount when applicable.
+- Missing pricing assumed zero but flagged.
+
+Dashboard Rationale:
+
+The dashboard provides executive-level visibility into revenue performance,
+partner performance, and exposure risk using dynamic slicers and pivot-based visuals.
